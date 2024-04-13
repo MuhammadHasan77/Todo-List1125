@@ -1,0 +1,19 @@
+{
+  "name": "todo-list1125",
+  "version": "1.0.0",
+  "description": "It is my Todo-list...",
+  "main": "index.js",
+  "type": "module",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Hasan",
+  "license": "MIT",
+  "dependencies": {
+    "@types/inquirer": "^9.0.7",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.17",
+    "save-dev": "^0.0.1-security"
+  }
+}
