@@ -2,14 +2,20 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 let todoList = [];
-console.log(chalk.blackBright.bold.bgBlueBright("\t\tHello !!! How are you? Welcome to MuhammadHasan77 Todo-list"));
+console.log(
+  chalk.blackBright.bold.blueBright(
+    "\t\tHello !!! How are you? Welcome to MuhammadHasan77 Todo-list"
+  )
+);
 while (true) {
     console.log();
     let operation = await inquirer.prompt([
         {
             type: "list",
             name: "op",
-            message: chalk.bold.yellowBright("What operation do you want to perform?"),
+      message: chalk.bold.yellowBright(
+        "What operation do you want to perform?"
+      ),
             choices: ["Add Task", "Remove Task", "View List", "Exit"],
         },
     ]);
@@ -18,27 +24,27 @@ while (true) {
             {
                 type: "input",
                 name: "task",
-                message: chalk.bold.greenBright("What do you want to include in the todo list? "),
+        message: chalk.bold.greenBright(
+          "What do you want to include in the todo list? "
+        ),
             },
         ]);
         todoList.push(todo.task);
-    }
-    else if (operation.op == "View List") {
+  } else if (operation.op == "View List") {
         if (todoList.length == 0) {
             console.log(chalk.bold.redBright("Empty List"));
-        }
-        else {
+    } else {
             console.log(chalk.underline.bold.bgWhite("TODO LIST :"));
             for (let i = 0; i < todoList.length; i++) {
                 console.log(i + 1 + "- " + todoList[i]);
             }
         }
-    }
-    else if (operation.op == "Remove Task") {
+  } else if (operation.op == "Remove Task") {
         if (todoList.length == 0) {
-            console.log(chalk.bold.redBright("No task can be removed i.e. list is empty"));
-        }
-        else {
+      console.log(
+        chalk.bold.redBright("No task can be removed i.e. list is empty")
+      );
+    } else {
             console.log(chalk.underline.bold.bgWhite("TODO LIST :"));
             for (let i = 0; i < todoList.length; i++) {
                 console.log(i + 1 + "- " + todoList[i]);
@@ -47,7 +53,9 @@ while (true) {
                 {
                     type: "number",
                     name: "remove",
-                    message: chalk.bold.yellowBright("Which task do you want to remove? Note : Enter only number "),
+          message: chalk.bold.yellowBright(
+            "Which task do you want to remove? Note : Enter only number "
+          ),
                 },
             ]);
             for (let k = 0; k < todoList.length; k++) {
@@ -65,9 +73,8 @@ while (true) {
                 }
             }
         }
-    }
-    else if (operation.op == "Exit") {
+  } else if (operation.op == "Exit") {
         break;
     }
 }
-console.log(chalk.bold.greenBright("Byyy!!! Take Care..."));
+console.log(chalk.bold.greenBright("Byy!!! Take Care..."));
