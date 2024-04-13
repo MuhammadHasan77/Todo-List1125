@@ -5,7 +5,7 @@ import chalk from "chalk";
 
 let todoList = [];
 console.log(
-  chalk.blackBright.bold.bgBlueBright(
+  chalk.blackBright.bold.blueBright(
     "\t\tHello !!! How are you? Welcome to MuhammadHasan77 Todo-list"
   )
 );
